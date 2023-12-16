@@ -1,8 +1,14 @@
 import fitz
 
-pdfs = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j' ]
+# pdfs = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j' ]
+pdfs = 'pdfs/RCTG'
 
-for pdf in pdfs:
+# for pdf in pdfs:
+for i in range(1, 9):
+    if i == 4: continue
+
+    pdf = pdfs + '_' + str(i)
+
     page_num = 0
 
     doc = fitz.open(pdf + '.pdf')
